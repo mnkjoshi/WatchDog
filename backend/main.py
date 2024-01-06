@@ -47,3 +47,23 @@ def login():
 
     except auth.UserNotFoundError:
         return 'Invalid username'
+
+
+@app.route('/signup', methods=['post'])
+def signup():
+    username = request.form['username']
+    password = request.form['password']
+
+    if not username.isalpha():
+        return 'Username can only have alphabets'
+
+    ref = db.reference('our/stuff/'+username)
+    if ref.get():
+        return 'User already exists'
+
+    ref.set({'password': password})
+
+    return 'Created user successfully'
+
+
+@app.route('')
