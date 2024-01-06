@@ -17,8 +17,6 @@ firebase_admin.initialize_app(cred, {
     'databaseURL': ''
 })
 
-ALLOWED_EXTENSIONS = ['jpeg']
-DATE_PATTERN = re.compile(r'^\d{2}-\d{2}-\d{4}$')
 
 app.config['UPLOAD_FOLDER'] = "./uploads"
 
@@ -64,6 +62,3 @@ def signup():
     ref.set({'password': password})
 
     return 'Created user successfully'
-
-
-@app.route('')
