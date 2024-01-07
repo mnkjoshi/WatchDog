@@ -15,10 +15,12 @@ export default function Report() {
     return (
         <div class="report-main">
             <div class = "report-report">
+                <p class = "report-info-top">Upload image of suspect to place them on emergency watchlist.</p>
                 <div class = "report-box">
                     <input type = "file" id = "report-input" class = "report-input" onChange={() => handleSubmission}/>
                 </div>
                 <div class = "report-display">
+                    <p class = "report-info">Drag and drop to upload!</p>
                     <img class = "report-image" src = {Placeholder}></img>
                 </div>
                 <button class = "report-submit">Submit</button>

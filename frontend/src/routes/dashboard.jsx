@@ -37,7 +37,7 @@ export default function Dashboard() {
                     <div class = "dashboard-button-divider"></div>
                     <button onClick={() => HandleClick(2)} class="dashboard-track">Track</button>
                     <div class = "dashboard-button-divider"></div>
-                    <button onClick={() => HandleClick(3)} class="dashboard-analytics">Analytics</button>
+                    {/* <button onClick={() => HandleClick(3)} class="dashboard-analytics">Analytics</button> */}
                 </div>
                 <div class = "dashboard-toggles">
                     <div class = "dashboard-divider"></div>

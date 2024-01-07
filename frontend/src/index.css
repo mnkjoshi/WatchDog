@@ -383,15 +383,20 @@ html {
 }
 
 .report-display {
-    background-color: #000E1B;
+    background-color: #ffffff;
     width: 50%;
     height: 50%;
+    border-radius: 10%;
+    border: solid;
+    border-color: #343434;
+    border-width: 3px;
 }
 
 .report-image {
     background-color: transparent;
-    height: 100%;
-    width: 100%;
+    margin-top: -20px;
+    height: 60%;
+    width: 60%;
 }
 
 .report-submit {
@@ -431,14 +436,14 @@ html {
 
 .wanted-1,
 .wanted-2 {
-    width: 90%;
+    width: 94%;
     height: 500px;
     background-color: #001c36;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
     align-items: center;
     align-content: center;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .wanted-1-icon,
@@ -452,6 +457,10 @@ html {
     bottom: 460px;
     height: 50px;
     cursor: pointer;
+}
+
+.report-info-top {
+    color: white;
 }
 
 /* ----------------------------Track Page---------------------------- */
@@ -516,15 +525,20 @@ html {
 }
 
 .track-display {
-    background-color: #000E1B;
+    background-color: #ffffff;
     width: 50%;
     height: 50%;
+    border-radius: 10%;
+    border: solid;
+    border-color: #343434;
+    border-width: 3px;
 }
 
 .track-image {
     background-color: transparent;
-    height: 100%;
-    width: 100%;
+    margin-top: -20px;
+    height: 60%;
+    width: 60%;
 }
 
 .track-submit {
@@ -554,7 +568,7 @@ html {
 
 .track-found {
     background-color: #e6e6e6;
-    width: 90%;
-    height: 90%;
+    width: 96%;
+    height: 80%;
     border-radius: 20px;
 }
