@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import cv2
 import math 
+import time
 
 # start webcam
 cap = cv2.VideoCapture(1)
@@ -16,7 +17,7 @@ classNames = ["person"]
 
 while True:
     success, img = cap.read()
-    results = model(img, stream=True, classes=[0])
+    results = model(img, stream=True, classes=[0], save_crop=True)
 
     # coordinates
     for r in results:
@@ -42,6 +43,8 @@ while True:
     cv2.imshow('Webcam', img)
     if cv2.waitKey(1) == ord('q'):
         break
+
+    
 
 cap.release()
 cv2.destroyAllWindows()
