@@ -23,6 +23,7 @@ def loop():
     tracking_dict = fc.get_tracking()
     for i in range(1,len(queryqueue)):
         qq = queryqueue[i]
+        flag = 1
         for k, v in tracking_dict.items():
             cs = cosineSimilarity(qq['image'], v['image'])
             if cs >= 0.75:
@@ -31,14 +32,16 @@ def loop():
                 v['camerasCrossed'].append(qq['cameraID'])
                 fc.update_tracking(k, v)
                 tracking_dict[k] = v
-            else:
-                image_json = {
-                    'image': queryqueue[i]['image'],
-                    'camerasCrossed': [queryqueue[i]['cameraID']],
-                    'images': [queryqueue[i]['image']]
-                }
-                fc.push_to_tracking(image_json)
-                tracking_dict = fc.get_tracking()
+                flag = 0
+                break
+        if flag:
+            image_json = {
+                'image': queryqueue[i]['image'],
+                'camerasCrossed': [queryqueue[i]['cameraID']],
+                'images': [queryqueue[i]['image']]
+            }
+            fc.push_to_tracking(image_json)
+            tracking_dict = fc.get_tracking()
     
     # clear the queue
     fc.clear_queue()
