@@ -32,6 +32,20 @@ class firebase_connection:
         }
         # encoded_image_json = json.dumps(image_json, cls=NumpyArrayEncoder)
         childref.push(image_json)
+    
+    def get_queue(self):
+        childref = self.__ref.child('queue')
+        queue_dict = childref.get()
+        imglist = [v for k, v in queue_dict.items()]
+        return imglist
+
+    def clear_queue(self):
+        childref = self.__ref.child('queue')
+        childref.delete()
+
+    def get_tracking(self):
+        childref = self.__ref.child('tracking')
+        return childref.get()
 
 if __name__ == '__main__':
     fc = firebase_connection()
