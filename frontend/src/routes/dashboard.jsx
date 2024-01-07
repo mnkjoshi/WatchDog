@@ -6,6 +6,13 @@ import darkMode from "../assets/darkMode.png"
 export default function Dashboard() {
     let navigate = useNavigate()
 
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
     function HandleClick(which) {
         console.log(which);
         switch (which) {
@@ -22,6 +29,7 @@ export default function Dashboard() {
                 navigate("/dashboard/analytics")
                 break;
             case 4:
+                setCookie("logged-in", false, -1);
                 navigate("/")
                 break;
         }
