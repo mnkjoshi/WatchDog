@@ -34,4 +34,4 @@ def cosineSimilarity(image_url1, image_url2):
     return cosine_similarity
 
 if __name__ == '__main__':
-    print(cosineSimilarity('https://storage.googleapis.com/manav-watchdog.appspot.com/jrzcuAo3g50.jpg', 'https://storage.googleapis.com/manav-watchdog.appspot.com/jrzcuAo3g51.jpg'))
+    print(cosineSimilarity('https://storage.googleapis.com/manav-watchdog.appspot.com/PFxS3V9gQm0.jpg', 'https://storage.googleapis.com/manav-watchdog.appspot.com/tKbaxXpoyq0.jpg'))

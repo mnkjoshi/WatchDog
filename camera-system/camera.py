@@ -7,7 +7,7 @@ from time import time
 from firebase_connection import firebase_connection
 import os
 
-CID = 1
+CID =1
 MAX_INTERVAL = 10
 
 fc = firebase_connection()
@@ -41,6 +41,8 @@ def camera():
             boxes = r.boxes
             image_key = get_random_string(10)
             for i, box in enumerate(boxes):
+                if box.conf < 0.6:
+                    continue
                 # bounding box
                 x1, y1, x2, y2 = box.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2) # convert to int values
