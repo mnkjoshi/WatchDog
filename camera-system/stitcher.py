@@ -39,7 +39,6 @@ def loop():
                 }
                 fc.push_to_tracking(image_json)
                 tracking_dict = fc.get_tracking()
-            break
     
     # clear the queue
     fc.clear_queue()

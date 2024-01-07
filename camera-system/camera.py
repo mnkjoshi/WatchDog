@@ -7,7 +7,7 @@ from time import time
 from firebase_connection import firebase_connection
 import os
 
-CID = 1
+CID =3
 MAX_INTERVAL = 10
 
 fc = firebase_connection()
