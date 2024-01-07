@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "public",
+    "site": "pro-watchdog",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
