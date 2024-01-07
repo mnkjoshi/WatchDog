@@ -2,7 +2,7 @@ import MainLogo from "../assets/WatchDogMain.png"
 import { useNavigate } from "react-router-dom";
 
 
-export default function Root() {
+export default function Login() {
     let navigate = useNavigate()
 
     function HandleClick() {
