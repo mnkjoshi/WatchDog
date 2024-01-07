@@ -16,7 +16,7 @@ classNames = ["person"]
 
 while True:
     success, img = cap.read()
-    results = model(img, stream=True)
+    results = model(img, stream=True, classes=[0])
 
     # coordinates
     for r in results:
@@ -30,14 +30,6 @@ while True:
             # put box in cam
             cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
 
-            # confidence
-            confidence = math.ceil((box.conf[0]*100))/100
-            print("Confidence --->",confidence)
-
-            # class name
-            cls = int(box.cls[0])
-            print("Class name -->", classNames[cls])
-
             # object details
             org = [x1, y1]
             font = cv2.FONT_HERSHEY_SIMPLEX
@@ -45,7 +37,7 @@ while True:
             color = (255, 0, 0)
             thickness = 2
 
-            cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
+            cv2.putText(img, classNames[0], org, font, fontScale, color, thickness)
 
     cv2.imshow('Webcam', img)
     if cv2.waitKey(1) == ord('q'):
