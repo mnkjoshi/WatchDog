@@ -8,6 +8,7 @@ from firebase_connection import firebase_connection
 import os
 
 CID = 1
+MAX_INTERVAL = 10
 
 fc = firebase_connection()
 
@@ -56,7 +57,7 @@ def camera():
 
                 cv2.putText(img, classNames[0], org, font, fontScale, color, thickness)
 
-                if interval == 10:
+                if interval == MAX_INTERVAL:
                     print("Uploading images")
                     ultralytics_crop_object = img[int(y1):int(y2), int(x1):int(x2)]
                     # Save the cropped object as an image
@@ -70,7 +71,7 @@ def camera():
         if cv2.waitKey(1) == ord('q'):
             break
 
-        if interval != 100:
+        if interval != MAX_INTERVAL:
             interval += 1
         else:
             interval = 0

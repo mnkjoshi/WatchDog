@@ -36,6 +36,8 @@ class firebase_connection:
     def get_queue(self):
         childref = self.__ref.child('queue')
         queue_dict = childref.get()
+        if not queue_dict:
+            return
         imglist = [v for k, v in queue_dict.items()]
         return imglist
 
