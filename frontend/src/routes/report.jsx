@@ -27,9 +27,11 @@ export default function Report() {
                 <div class = "report-wanted">
                     <div class = "wanted-1">
                         <img src = {wanted1Icon} class = "wanted-1-icon"/>
+                        <img class = "report-close" src = "https://cdn-icons-png.flaticon.com/512/1828/1828843.png"/>
                     </div>
                     <div class = "wanted-2">
                         <img src = {wanted2Icon} class = "wanted-2-icon"/>
+                        <img class = "report-close" src = "https://cdn-icons-png.flaticon.com/512/1828/1828843.png"/>
                     </div>
                     <div class = "wanted-3">
                         <img class = "wanted-3-icon"/>
