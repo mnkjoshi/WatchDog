@@ -12,13 +12,10 @@ class firebase_connection:
         })
         self.__ref = db.reference('/')
 
-    def save_image(self, image, weapon_type=None, time=None, date=None, location=None):
+    def save_image(self, image, cameraID):
         """
-        :param image: This is the image np object
-        :param weapon_type: This is the weapontype as a string
-        :param time: This is the time as a string
-        :param date: This is the date as a string
-        :param location: This is the string object
+        :param image: This is the path to the image
+        :param cameraID: id of the camera 
         :return: None
         """
         bucket = storage.bucket()
@@ -31,7 +28,7 @@ class firebase_connection:
         childref = self.__ref.child('images')
         image_json = {
             'image':  blob.public_url,
-            'cameraID': 1
+            'cameraID': cameraID
         }
         # encoded_image_json = json.dumps(image_json, cls=NumpyArrayEncoder)
         childref.push(image_json)
