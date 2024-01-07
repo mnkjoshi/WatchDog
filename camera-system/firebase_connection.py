@@ -50,6 +50,9 @@ class firebase_connection:
     def push_to_tracking(self, image_json):
         childref = self.__ref.child('tracking')
         childref.push(image_json)
+    
+    def update_tracking(self, key, image_json):
+        childref = self.__ref.child('tracking').child(key).set(image_json)
 
 if __name__ == '__main__':
     fc = firebase_connection()
