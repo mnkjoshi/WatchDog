@@ -32,3 +32,6 @@ def cosineSimilarity(image_url1, image_url2):
     cosine_similarity = np.dot(features1_norm, features2_norm)
 
     return cosine_similarity
+
+if __name__ == '__main__':
+    print(cosineSimilarity('https://storage.googleapis.com/manav-watchdog.appspot.com/jrzcuAo3g50.jpg', 'https://storage.googleapis.com/manav-watchdog.appspot.com/jrzcuAo3g51.jpg'))
