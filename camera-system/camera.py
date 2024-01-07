@@ -7,7 +7,7 @@ from time import time
 from firebase_connection import firebase_connection
 import os
 
-CID = 2
+CID = 1
 
 fc = firebase_connection()
 
