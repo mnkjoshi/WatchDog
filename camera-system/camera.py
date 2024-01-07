@@ -5,7 +5,9 @@ import cv2
 import math 
 from time import time
 from firebase_connection import firebase_connection
-import os 
+import os
+
+CID = 2
 
 fc = firebase_connection()
 
@@ -60,7 +62,7 @@ def camera():
                     # Save the cropped object as an image
                     image_name = image_key + str(i) + '.jpg'
                     cv2.imwrite(image_name, ultralytics_crop_object)
-                    fc.save_image(image=image_name, cameraID=1)
+                    fc.save_image(image=image_name, cameraID=CID)
                     os.remove(image_name)
             
 
