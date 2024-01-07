@@ -21,6 +21,9 @@ export default function Dashboard() {
             case 3:
                 navigate("/dashboard/analytics")
                 break;
+            case 4:
+                navigate("/")
+                break;
         }
     }
 
@@ -42,7 +45,7 @@ export default function Dashboard() {
                 <div class = "dashboard-toggles">
                     <div class = "dashboard-divider"></div>
                     <button class = "dashboard-mode-toggle"><img class = "dashboard-mode-icon" src = {darkMode}/></button>
-                    <button class = "dashboard-logout">Sign out</button>
+                    <button class = "dashboard-logout"  onClick={() => HandleClick(4)}>Sign out</button>
                 </div>
             </div>
             <div class = "dashboard-outlet">

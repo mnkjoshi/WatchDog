@@ -22,12 +22,23 @@ export default function Track() {
                 <div class = "track-display">
                     <p class = "track-info">Drag and drop to upload!</p>
                     <img class = "track-image" src = {Placeholder}></img>
-                </div>
+                </div>  
                 <button class = "track-submit">Submit</button>
             </div>
             <div class = "track-tracker">
                 <div class = "track-found">
+                    <div class = "track-picture">
+                        
+                    </div>
+                    <div class = "track-camera1">
 
+                    </div>
+                    <div class = "track-camera2">
+
+                    </div>
+                    <div class = "track-camera3">
+
+                    </div>
                 </div>
             </div>
       </div>
