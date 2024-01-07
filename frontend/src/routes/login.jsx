@@ -10,12 +10,14 @@ export default function Login() {
     }
 
     return (
-        <div class="landing-main">
-            <div class="landing-logo-container">
-                <img src = {MainLogo} class="landing-logo"/>
+        <div class="login-main">
+            <div class="login-logo-container">
+                <img src = {MainLogo} class="login-logo"/>
             </div>
-            <button onClick={HandleClick} class="landing-enter">ENTER</button>
-            <div class="landing-quotes">
+            <input class = "login-user" placeholder = "Username"/>
+            <input class = "login-pass" placeholder = "Password" type = "password"/>
+            <button onClick={HandleClick} class="login-enter">SUBMIT</button>
+            <div class="login-quotes">
                 <span>Detect</span>
                 <span>Secure</span>
                 <span>Protect</span>
