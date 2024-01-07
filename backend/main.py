@@ -14,7 +14,7 @@ import extension
 app = Flask(__name__)
 cred = credentials.Certificate("secret.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': ''
+    'databaseURL': 'https://manav-watchdog-default-rtdb.firebaseio.com/'
 })
 
 
