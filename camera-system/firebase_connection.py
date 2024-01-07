@@ -25,10 +25,10 @@ class firebase_connection:
         # Opt : if you want to make public access from the URL
         blob.make_public()
 
-        childref = self.__ref.child('images')
+        childref = self.__ref.child('camera'+str(cameraID))
         image_json = {
             'image':  blob.public_url,
-            'cameraID': cameraID
+            'linked': False
         }
         # encoded_image_json = json.dumps(image_json, cls=NumpyArrayEncoder)
         childref.push(image_json)

@@ -54,7 +54,7 @@ def camera():
 
                 cv2.putText(img, classNames[0], org, font, fontScale, color, thickness)
 
-                if interval == 100:
+                if interval == 10:
                     print("Uploading images")
                     ultralytics_crop_object = img[int(y1):int(y2), int(x1):int(x2)]
                     # Save the cropped object as an image
