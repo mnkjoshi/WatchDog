@@ -1,0 +1,56 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  background-color: #1a1a1a;
+  /* Adjust the color to match the exact background of your image */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+  /* Adjust as necessary */
+}
+
+.logo {
+  max-width: 70%;
+  height: auto;
+}
+
+.enter-btn {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  /* Adjust as necessary */
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  /* Adjust the weight as needed */
+}
+
+.enter-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.features {
+  display: flex;
+  width: 80%;
+  /* Adjust as necessary for proper spacing */
+  justify-content: space-around;
+}
+
+.features span {
+  color: #ffffff;
+  font-weight: 500;
+  /* Adjust the weight as needed */
+}
