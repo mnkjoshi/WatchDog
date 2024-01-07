@@ -7,12 +7,19 @@ export default function Dashboard() {
     let navigate = useNavigate()
 
     function HandleClick(which) {
+        console.log(which);
         switch (which) {
+            case 0:
+                navigate("/dashboard")
+                break;
             case 1:
-
+                navigate("/dashboard/report")
                 break;
             case 2:
-
+                navigate("/dashboard/track")
+                break;
+            case 3:
+                navigate("/dashboard/analytics")
                 break;
         }
     }

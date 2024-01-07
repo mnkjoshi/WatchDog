@@ -1,7 +1,7 @@
 export default function Analytics() {
     return (
       <p>
-        Index
+        Analytics
       </p>
     );
   }
