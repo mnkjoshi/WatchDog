@@ -1,16 +1,22 @@
 import MainLogo from "../assets/WatchDogMain.png"
 import { useNavigate } from "react-router-dom";
-
+import "../assets/particles.scss"
 
 export default function Login() {
     let navigate = useNavigate()
 
     function HandleClick() {
-        navigate("/login")
+        navigate("/dashboard")
     }
 
     return (
         <div class="login-main">
+            <div class="animation-wrapper">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+            </div>
             <div class="login-logo-container">
                 <img src = {MainLogo} class="login-logo"/>
             </div>
