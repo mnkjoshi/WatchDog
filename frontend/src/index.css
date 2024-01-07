@@ -571,4 +571,84 @@ html {
     width: 96%;
     height: 80%;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.track-picture,
+.track-camera1,
+.track-camera2,
+.track-camera3 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-divider {
+    width: 0.1px;
+    height: 80%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+
+    border: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+/* ----------------------------Index Page---------------------------- */
+
+.index-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+}
+
+
+.index-users {
+    background-color: #e6e6e6;
+    width: 60%;
+    height: 90%;
+    border-radius: 20px;
+    overflow-y: scroll;
+    display: grid;
+    grid-column: 90%;
+}
+
+.index-watchlist {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-tracker {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-user-1,
+.index-user-2 {
+    width: 100px;
+    height: 100px;
+    background-color: #001c36;
+    border-radius: 50%;
+    margin-top: 15px;
+    align-items: center;
+    align-content: center;
+    margin-left: 15px;
 }
