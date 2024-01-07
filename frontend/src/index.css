@@ -337,7 +337,7 @@ html {
     display: flex;
     flex: 1;
     height: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -350,3 +350,101 @@ html {
     align-items: center;
     justify-content: center;
 }
+
+.report-input::-webkit-file-upload-button{
+    border-radius: 4px;
+    padding: 0px 16px;
+    height: 40px;
+    cursor: pointer;
+    border: solid;
+    border-color: white;
+    margin-right: 16px;
+    transition: 0.3s;
+    align-items: center;
+    font-family: "Lexend";
+    font-size: 25px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+
+.report-input::-webkit-file-upload-button:hover {
+    background-color: #001c36;
+}
+
+.report-box {
+    width: 60%;
+    height: 10%;  
+    border-radius: 4px;
+    margin-bottom: 10px;  
+}
+
+.report-display {
+    background-color: #000E1B;
+    width: 50%;
+    height: 50%;
+}
+
+.report-image {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.report-submit {
+    margin-top: 15px;
+    background-color: #000000;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-family: 'Lexend';
+    border: none;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.report-submit:hover {
+    background-color: white;
+    color: black;
+    outline: none;
+    font-family: 'Lexend';
+    border: none;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.report-wanted {
+    background-color: #e6e6e6;
+    width: 60%;
+    height: 90%;
+    border-radius: 20px;
+    overflow-y: scroll;
+    display: grid;
+    grid-column: 90%;
+}
+
+.wanted-1,
+.wanted-2 {
+    width: 90%;
+    height: 500px;
+    background-color: #001c36;
+    border-radius: 20px;
+    margin-top: 20px;
+    align-items: center;
+    align-content: center;
+    margin-left: 30px;
+}
+
+.wanted-1-icon,
+.wanted-2-icon {
+    height: 100%;
+}
+
+
+/* ----------------------------Track Page---------------------------- */
